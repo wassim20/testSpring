@@ -1,0 +1,244 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Emma Johnson",
+      "email": "emma.johnson@example.com"
+    },
+    {
+      "id": 2,
+      "name": "Liam Smith",
+      "email": "liam.smith@example.com"
+    },
+    {
+      "id": 3,
+      "name": "Olivia Brown",
+      "email": "olivia.brown@example.com"
+    },
+    {
+      "id": 4,
+      "name": "Noah Williams",
+      "email": "noah.williams@example.com"
+    },
+    {
+      "id": 5,
+      "name": "Sophia Jones",
+      "email": "sophia.jones@example.com"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Website Redesign",
+      "description": "Redesign company website with modern UI/UX",
+      "owner_id": 1
+    },
+    {
+      "id": 2,
+      "name": "Mobile App Development",
+      "description": "Build cross-platform mobile application",
+      "owner_id": 2
+    },
+    {
+      "id": 3,
+      "name": "Database Migration",
+      "description": "Migrate legacy database to cloud platform",
+      "owner_id": 3
+    }
+  ],
+  "tasks": [
+    {
+      "id": 101,
+      "title": "Create wireframes",
+      "status": "DONE",
+      "project_id": 1,
+      "assignee_id": 1
+    },
+    {
+      "id": 102,
+      "title": "Develop homepage",
+      "status": "IN_PROGRESS",
+      "project_id": 1,
+      "assignee_id": 2
+    },
+    {
+      "id": 103,
+      "title": "Implement responsive design",
+      "status": "OPEN",
+      "project_id": 1,
+      "assignee_id": 3
+    },
+    {
+      "id": 104,
+      "title": "Design app icon",
+      "status": "DONE",
+      "project_id": 2,
+      "assignee_id": 4
+    },
+    {
+      "id": 105,
+      "title": "Build user authentication",
+      "status": "IN_PROGRESS",
+      "project_id": 2,
+      "assignee_id": 5
+    },
+    {
+      "id": 106,
+      "title": "Test iOS version",
+      "status": "OPEN",
+      "project_id": 2,
+      "assignee_id": 1
+    },
+    {
+      "id": 107,
+      "title": "Backup existing database",
+      "status": "DONE",
+      "project_id": 3,
+      "assignee_id": 2
+    },
+    {
+      "id": 108,
+      "title": "Set up cloud database instance",
+      "status": "IN_PROGRESS",
+      "project_id": 3,
+      "assignee_id": 3
+    },
+    {
+      "id": 109,
+      "title": "Migrate customer data",
+      "status": "OPEN",
+      "project_id": 3,
+      "assignee_id": 4
+    },
+    {
+      "id": 110,
+      "title": "Test data integrity",
+      "status": "OPEN",
+      "project_id": 3,
+      "assignee_id": 5
+    }
+  ],
+  "activity_log": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "project_id": 1,
+      "action": "CREATE_PROJECT",
+      "created_at": "2025-07-15T09:00:00Z"
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "project_id": 1,
+      "action": "CREATE_TASK",
+      "created_at": "2025-07-15T10:30:00Z"
+    },
+    {
+      "id": 3,
+      "user_id": 2,
+      "project_id": 1,
+      "action": "UPDATE_TASK",
+      "created_at": "2025-07-16T14:15:00Z"
+    },
+    {
+      "id": 4,
+      "user_id": 3,
+      "project_id": 1,
+      "action": "COMMENT_TASK",
+      "created_at": "2025-07-17T11:45:00Z"
+    },
+    {
+      "id": 5,
+      "user_id": 2,
+      "project_id": 2,
+      "action": "CREATE_PROJECT",
+      "created_at": "2025-07-18T13:20:00Z"
+    },
+    {
+      "id": 6,
+      "user_id": 4,
+      "project_id": 2,
+      "action": "CREATE_TASK",
+      "created_at": "2025-07-18T15:00:00Z"
+    },
+    {
+      "id": 7,
+      "user_id": 5,
+      "project_id": 2,
+      "action": "UPDATE_TASK",
+      "created_at": "2025-07-19T16:30:00Z"
+    },
+    {
+      "id": 8,
+      "user_id": 3,
+      "project_id": 3,
+      "action": "CREATE_PROJECT",
+      "created_at": "2025-07-20T08:45:00Z"
+    },
+    {
+      "id": 9,
+      "user_id": 2,
+      "project_id": 3,
+      "action": "CREATE_TASK",
+      "created_at": "2025-07-20T10:15:00Z"
+    },
+    {
+      "id": 10,
+      "user_id": 3,
+      "project_id": 3,
+      "action": "UPDATE_TASK",
+      "created_at": "2025-07-21T11:30:00Z"
+    },
+    {
+      "id": 11,
+      "user_id": 1,
+      "action": "LOGIN",
+      "created_at": "2025-08-01T08:05:00Z"
+    },
+    {
+      "id": 12,
+      "user_id": 2,
+      "action": "LOGIN",
+      "created_at": "2025-08-01T08:07:00Z"
+    },
+    {
+      "id": 13,
+      "user_id": 3,
+      "action": "LOGIN",
+      "created_at": "2025-08-01T08:10:00Z"
+    },
+    {
+      "id": 14,
+      "user_id": 4,
+      "action": "LOGIN",
+      "created_at": "2025-08-01T08:12:00Z"
+    },
+    {
+      "id": 15,
+      "user_id": 5,
+      "action": "LOGIN",
+      "created_at": "2025-08-01T08:15:00Z"
+    },
+    {
+      "id": 16,
+      "user_id": 1,
+      "project_id": 1,
+      "action": "UPDATE_TASK",
+      "created_at": "2025-08-01T09:30:00Z"
+    },
+    {
+      "id": 17,
+      "user_id": 5,
+      "project_id": 2,
+      "action": "COMMENT_TASK",
+      "created_at": "2025-08-01T10:45:00Z"
+    },
+    {
+      "id": 18,
+      "user_id": 4,
+      "project_id": 3,
+      "action": "UPDATE_TASK",
+      "created_at": "2025-08-01T14:00:00Z"
+    }
+  ]
+}
