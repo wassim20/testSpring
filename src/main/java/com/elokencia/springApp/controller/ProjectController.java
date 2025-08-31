@@ -24,35 +24,30 @@ public class ProjectController {
     // GET /projects/{id} - Get project by ID with nested tasks
     @GetMapping("/{id}")
     public ResponseEntity<ProjectDTO> getProjectById(@PathVariable Long id) {
-        return projectService.getProjectById(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
+        return ResponseEntity.ok(
+                projectService.getProjectById(id)
+                        .orElseThrow(() -> new RuntimeException("Project not found with ID: " + id))
+        );
     }
 
     // POST /projects - Create new project
     @PostMapping
     public ResponseEntity<ProjectDTO> createProject(@RequestBody ProjectDTO projectDTO) {
-        try {
-            ProjectDTO saved = projectService.createProject(projectDTO);
-            return ResponseEntity.ok(saved);
-        } catch (RuntimeException e) {
-            return ResponseEntity.badRequest().build();
-        }
+        ProjectDTO saved = projectService.createProject(projectDTO);
+        return ResponseEntity.ok(saved);
     }
 
-    // PUT /projects/{id} - Update project
     @PutMapping("/{id}")
-    public ResponseEntity<ProjectDTO> updateProject(@PathVariable Long id, @RequestBody ProjectDTO projectDTO) {
-        if (!id.equals(projectDTO.id())) {
-            throw new RuntimeException("Project not found with ID: " + projectDTO.id());
-        }
-        try {
-            ProjectDTO updated = projectService.updateProject(projectDTO);
-            return ResponseEntity.ok(updated);
-        } catch (RuntimeException e) {
-            throw new RuntimeException("Can't Update ID: " + projectDTO.id());
+    public ResponseEntity<ProjectDTO> updateProject(
+            @PathVariable Long id,
+            @RequestBody ProjectDTO projectDTO) {
 
+        if (!id.equals(projectDTO.id())) {
+            throw new IllegalArgumentException("Path ID does not match project DTO ID");
         }
+
+        ProjectDTO updated = projectService.updateProject(projectDTO);
+        return ResponseEntity.ok(updated);
     }
 
     // DELETE /projects/{id}
