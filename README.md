@@ -8,8 +8,7 @@ This API is built with clean architecture, proper error handling, and real-world
 
 ## 🌟 Features
 
-✅ **Full CRUD** for Projects and Tasks  
-✅ **User Task Progress Tracking** – `GET /users/{id}/progress`  
+✅ **Full CRUD** for Projects and Tasks   
 ✅ **Nested Data Support** – Get users with their tasks  
 ✅ **Secure Authentication** – Login with Microsoft (Outlook)  
 ✅ **Structured Error Responses** – Clear JSON on errors  
